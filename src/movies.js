@@ -120,7 +120,20 @@ function dramaMoviesScore(moviesArray) {
 dramaMoviesScore(movies);
 
 // Iteration 5: Ordering by year - Order by year, ascending (in growing order)
-function orderByYear(moviesArray) {}
+
+// Still not working but at least I tried
+  
+function orderByYear(moviesArray) {
+  const moviesArray2 = [...moviesArray];
+      let orderBY = moviesArray2.sort( (x, y) => x.year - y.year);
+      let copyOrderBY = [...orderBY];      
+      let orderByTitle = copyOrderBY.sort( (x, y) => x.title - y.title);
+
+      return orderByTitle;
+  }
+
+  orderByYear(movies);
+
 
 // Iteration 6: Alphabetic Order - Order by title and print the first 20 titles
 function orderAlphabetically(moviesArray) {}
